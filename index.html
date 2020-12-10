@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script>
+        /* "EJERCICIO 1" */
+        function ejercicio1(){
+            let  h, r;
+            h = prompt('Ingrese la altura: ');
+            r = prompt('Ingrese el radio: ');
+            areaBase= 3.1416*r^2;
+            areaLateral=23.1416*r*h;
+            areaTotal = 2*areaBase + areaLateral;
+            alert('El área de la base: '+ areaBase);
+            alert('El área Lateral es: ' + areaLateral);
+            alert('El área total es: ' + areaTotal);
+    
+        }
+
+
+        function ejercicio2(){
+            let num;
+            num = prompt('Ingrese la cantidad de aire en litros: ');
+            alert('La cantidad de N:   '+num(0.78)+'L');
+            alert('La cantidad de O:  '+num(0.21)+'L');
+            alert('La cantidad de CO2:   '+num(0.0003)+'L');
+            alert('La cantidad de Ar:   '+num(0.0094)+'L');
+            alert('La cantidad de H: '+num(0.0001)+'L'); 
+    
+        }
+
+
+        function ejercicio3(){
+            let base ;
+            let altura ;
+
+            base = prompt('Ingrese la base : ');
+            altura = prompt('Ingrese la altura : ');
+
+            area =  base * altura;
+            perimetro =  2*(parseInt(base) + parseInt(altura)); /*Para convertir en entero parseInt , realizar operaciones enteras*/
+
+            alert('El area del rectangulo es : ' + area);
+            alert('El perimetro es : ' + perimetro);
+    
+        }
+
+        function ejercicio4(){
+            let tela ;
+
+            tela = prompt('Ingresa la cantidad de tela(m) : ');
+            transformar_centimetros = tela / 0.01 ;
+            transformar_pulgadas = parseInt((transformar_centimetros / 2.54));
+
+            alert('La tela en centrimetros es ' + transformar_centimetros);
+            alert('La tela en pulgadas es : ' + transformar_pulgadas);
+    
+        }
+
+        function ejercicio5(){
+            var num;
+
+            num=prompt('numero:');
+
+            if(num<1000 && num>99){
+                cifra_1= parseInt(num/100);
+                division=parseInt((num%100)/10); 
+                cifra_3=num%10;
+                suma=parseInt(cifra_1+division+cifra_3);
+                promedio=(suma)/3;
+                alert('la suma es:'+suma);
+                alert('el promedio es:'+promedio);
+            }
+            else{
+                alert('Ella no te ama xd');
+            } 
+    
+        }
+
+        function ejercicio6(){
+            var num=prompt('Ingrese un numero:');
+
+            if(num>9 && num<100){
+                num_first=parseInt(num/10);
+                num_second=num%10;
+            alert(num_second+""+num_first);
+            }
+            else{
+                alert('ella no te ama')
+            }
+        }
+
+        function ejercicio7(){
+            var segundos ;
+            segundos = prompt('Ingrese una cantidad de segundos :');
+
+            n_horas = parseInt(segundos / 3600);
+            n_minutos = parseInt(((segundos / 3600) - n_horas)*60);
+            n_segundos = parseInt(((((segundos / 3600) - n_horas)*60)-n_minutos)*60);
+
+            alert('Cantidad de Horas : '+n_horas);
+            alert('Cantidad de minutos : '+n_minutos);
+            alert('Cantidad de segundos : '+n_segundos);
+                
+        }
+
+        function ejercicio8(){
+            let num = prompt('Ingrese un numero de 4 cifras : ')
+           
+            while(true){
+                if (num < 1000 || num > 9999){
+                    alert('Ingrese los datos correctos');
+                    num = prompt('Ingrese un numero de 4 cifras : ');
+                }   
+                else{
+                    num_extremo1 = parseInt(num/1000); 
+                    num_medio1 = parseInt(num/100)-(10*num_extremo1);
+                    num_medio2 = parseInt(((num/10)-(100*num_extremo1))%10);
+                    num_extremo2 = parseInt(num%10);
+                    alert("El numero en extremos y medios es : "+num_extremo1+""+num_extremo2+""+num_medio1+""+num_medio2);
+                    break
+                }     
+            }
+   
+        }
+
+        function ejercicio9(){
+            var gaseosas_3litros;
+            alert('Bienvenido a la tienda DonReynaldo');
+            alert('El precio de la gaseosa es de : 15 soles');
+            alert('SOLO TENEMOS GASEOSAS DE 3 LITROS');
+            cantidad_gaseosas = prompt('Ingrese la cantidad de gaseosas que desee comprar : ');
+            alert('! SOLO POR HOY RECIBIRAS UN DESCUENTO DE 5% POR C/U !');
+
+            precio_unidad = (15-(0.05*15));
+            importe_compra = (15*cantidad_gaseosas);
+            importe_descuento = ((precio_unidad*0.07)*cantidad_gaseosas);
+            importe_a_pagar = (importe_compra - importe_descuento);
+            obsequio_compra = parseInt(cantidad_gaseosas * 2);
+
+            alert('El precio por unidad es : '+precio_unidad);
+            alert('El importe de la compra es : '+importe_compra.toFixed(2));
+            alert('El importe del descuento : '+importe_descuento.toFixed(2));
+            alert('El importe a pagar es : '+importe_a_pagar.toFixed(2));
+            alert('Recibiras de obsequio de '+obsequio_compra+" caramelos");
+        }
+
+        function ejercicio10(){
+            /*NOMBRAR VARIABLES*/
+            var numero_automoviles ;
+            var dias ; 
+            /*ENTRADA AL INTERFAZ*/
+            alert('Bievenidos a DiegoCars');
+            alert('Te ofrecemos alquiler de automoviles Audi , Porshe ');
+            /*DATOS DEL CLIENTE*/
+            nombre = prompt('Ingrese su nombre : ');
+            dni    = prompt('Ingrese su DNI : '); 
+            /*DESARROLLO DEL PROGRAMA*/
+            alert('El Alquiler de los automoviles por dia es 350');
+            numero_automoviles   = prompt('Cuantos automoviles desea alquilar : ')
+            dias                 = prompt('Cuantos dias desea alquilar el automovil : ')
+            importe_bruto        = (numero_automoviles* dias*350);
+            importe_descuento    = ( 0.15*importe_bruto);
+            importe_neto_a_pagar = (importe_bruto - importe_descuento);
+            obsequio             = (numero_automoviles * 3); 
+
+            alert('El importe bruto es : '+importe_bruto);
+            alert('El importe del descuento : '+importe_descuento);
+            alert('El importe neto a pagar : '+importe_neto_a_pagar);
+            alert('La cantidad de obsequios es de '+obsequio+" lapiceros")
+            alert('! GRACIAS POR CONFIAR EN NOSOTROS !'+"\nUsuario : "+nombre+"\nDni : "+dni);
+        }
+
+        function ejercicio11(){
+            /*DECLARANDO EL PRECIO*/
+            var precio_cono_cd = 120;
+            /*BIENVENIDA AL USUARIO*/
+            alert('Bienvenidos a MiguelStore')
+            alert('Por motivos de cuarentena , lo unico que ofrecemos'+"\nes la venta de conos de Cd de 100 unidades");
+            var cantidad_de_conos_de_CD = prompt('Ingrese cuantos conos de CD´s desea :'+"\nRecuerde que cada cono de CD´s contiene 100 unidades"+"\nEl costo de cada cono es de : 120.00 soles");
+            /*DESARROLLO DE LAS PREGUNTAS*/
+            importe_compra_conos                 = (cantidad_de_conos_de_CD * 120);
+            importe_compra_conos_con_descuentos1 = (importe_compra_conos*0.05);
+            importe_compra_conos_con_descuentos2 = 0.05*(importe_compra_conos-importe_compra_conos_con_descuentos1);
+            descuento_total                      = (importe_compra_conos_con_descuentos1+importe_compra_conos_con_descuentos2);
+            importe_a_pagar                      = (importe_compra_conos-descuento_total);
+            alert('El importe de la compra es : '+ importe_compra_conos);
+            alert('El importe del descuento total :'+descuento_total);
+            alert('El importe a pagar es : '+importe_a_pagar);
+            alert('Gracias por preferirnos '+"\n! FELIZ NAVIDAD ! Y PROSPERO AÑO NUEVO");
+
+        }
+
+        function ejercicio12(){
+            
+            /*DEFINIR ALGUNAS VARIABLES*/
+            var bonificacion_hijos  = 50.00;
+            var sueldo_basico       = 600.00;
+            var importe_vendido_total;
+            /*ENTRADA AL INTERFAZ*/
+            alert('Bienvenidos a la CorporacionJhanina');
+            alert('Por favor complete los siguientes campos :');
+            /*DESARROLLO DEL PROGRAMA*/
+            cantidad_de_hijos       = prompt('Cuantos hijos tienes : '+"\nConsiderar : Solo en etapa escolar de 6 - 17 años");
+            importe_vendido_total   = prompt('Digitar el importe total vendido del mes :');
+            comision                = (0.075*importe_vendido_total);
+            sueldo_bruto            = (sueldo_basico + comision + (cantidad_de_hijos*bonificacion_hijos));
+            descuento_por_ley       = (0.11 * sueldo_bruto);
+            sueldo_neto             = (sueldo_bruto - descuento_por_ley); 
+            /*SALIDAS DE LOS DATOS*/
+            alert('La comisión es : '+comision+" soles");
+            alert('La bonificación es : '+(cantidad_de_hijos*bonificacion_hijos));
+            alert('El sueldo bruto es : '+sueldo_bruto.toFixed(2));
+            alert('El descuento es de : '+descuento_por_ley.toFixed(2));
+            alert('El sueldo neto del vendedor es '+sueldo_neto.toFixed(2));
+            alert('Gracias por su consulta '+"\n! FELIZ NAVIDAD ! Y PROSPERO AÑO NUEVO");
+
+        }
+
+        function ejercicio13(){
+            var sueldo ;
+            sueldo = prompt('Ingresar el sueldo del empleado : ');
+            while(true){
+                if(sueldo < 0){
+                    alert('El numero que ingreso no es valido',"\nVuelve a intentarlo")
+                    sueldo = prompt('Ingresar el sueldo del empleado : ');
+                }
+                else{
+                    alert('Gracias por ingresar el sueldo')
+                    break
+                }
+            }
+            if(sueldo > 1800){
+                descuento = 0.15*(sueldo-1800);
+                alert('El descuento es de :' +descuento+" soles");
+            }
+            else{
+                alert("No acredita a ningun descuento");
+            } 
+        }
+
+        function ejercicio14(){
+            let numero;
+            numero = prompt('Digite un número :');
+            while(true){
+                if(numero < 100 && numero > 999 ){
+                    alert('Ingrese de nuevo gil');
+                    numero = prompt('Digite un número :');
+                }
+                if(numero%2 == 1){
+                    numero_1 = parseInt(numero/100);
+                    numero_2 = parseInt((numero/10) - (10*numero_1));
+                    numero_3 = numero%10;
+                    numero_1_final = numero_1*100;
+                    numero_2_final = numero_2*10;
+                    numero_3_final = numero_3;
+                    numero_1_final_invertido = numero_3*100;
+                    numero_2_final_invertido = numero_2*10;
+                    numero_3_final_invertido = numero_1;
+                    alert('La suma del numero mas su inversa es : ')
+                    alert(numero_1_final+numero_2_final+numero_3_final+numero_1_final_invertido+numero_2_final_invertido+numero_3_final_invertido);
+                    alert('El numero invertido es'+"\n"+numero_3+""+numero_2+""+numero_1);
+                    break
+                }
+            }  
+        
+        }
+        function ejercicio15(){
+            let num, a, b;
+
+            num = prompt('Ingrese el número: ')
+                //funcion   : Math.trunc
+                a = Math.trunc(num/10);
+                b = Math.trunc(num%10);
+            if(a == b)
+            {
+                alert('Capicua');
+            }
+            else
+            {
+                alert('No es capicua');
+            }  
+        }
+
+        var movimiento
+     
+    </script>
+</head>
+<body>
+    <header>
+        <h1>BIENVENIDOS A MATHROCKS</h1>
+
+    </header>
+
+
+    <body>
+     
+        <button onclick="ejercicio1()">Ejercicio 1</button>
+        <button onclick="ejercicio2()">Ejercicio 2</button>
+        <button onclick="ejercicio3()">Ejercicio 3</button>
+        <button onclick="ejercicio4()">Ejercicio 4</button>
+        <button onclick="ejercicio5()">Ejercicio 5</button>
+        <button onclick="ejercicio6()">Ejercicio 6</button>
+        <button onclick="ejercicio7()">Ejercicio 7</button>
+        <button onclick="ejercicio8()">Ejercicio 8</button>
+        <button onclick="ejercicio9()">Ejercicio 9</button>
+        <button onclick="ejercicio10()">Ejercicio 10</button>
+        <button onclick="ejercicio11()">Ejercicio 11</button>
+        <button onclick="ejercicio12()">Ejercicio 12</button>
+        <button onclick="ejercicio13()">Ejercicio 13</button>
+        <button onclick="ejercicio14()">Ejercicio 14</button>
+        <button onclick="ejercicio15()">Ejercicio 15</button>
+    <div >
+        <h2>Integrantes : </h2>
+        <ul>
+            <li>Mallcco, Jhon</li>
+            <li>Flores, Diego</li>
+            <li>Contreras, Aaron</li>
+            <li>Alarcon, Jhanina</li>
+            <li>Arbierto, Melany</li>
+        </ul>
+
+
+    </div>   
+
+
+        
+     
+    <div id = "imagen1">
+        <img src="img/img2.png" alt="">
+    </div>
+    <div id = "imagen2">
+        <img src="img/img2.png" alt="">
+    </div>
+    <div id = "imagen3">
+        <img src="img/img2.png" alt="">
+    </div>
+    <div id = "imagen4">
+        <img src="img/img2.png" alt="">
+    </div>
+    <div id = "imagen5">
+        <img src="img/img2.png" alt="">
+    </div>
+
+
+
+
+    </body>
+    
+   
+ 
+
+</body>
+</html>

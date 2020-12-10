@@ -1,0 +1,53 @@
+h1{
+    text-align: center;
+    color: red;
+    background-color: black;
+    padding: 15px;
+}
+#imagen1{
+    position: absolute;
+    left: 15px;
+    top: 25em;
+   
+    
+}
+#imagen2{
+    position: absolute;
+    left: 16em;
+    top: 25em;
+   
+    
+}
+#imagen3{
+    position: absolute;
+    left: 33em;
+    top: 25em;
+   
+    
+}
+#imagen4{
+    position: absolute;
+    left: 50em;
+    top: 25em;
+   
+    
+}
+#imagen5{
+    position: absolute;
+    left: 67em;
+    top: 25em;
+   
+    
+}
+
+button{
+    background-color: green;
+    padding: 6px;
+    text-decoration-color: blue;
+    
+}
+
+h2{
+    color: green;
+}
+
